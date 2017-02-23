@@ -6,6 +6,6 @@ angular.module('Home')
     ['$scope', 'HomeService',
     function ($scope, HomeService) {
         HomeService.GetSecureData(function (response) {
-            $scope.demoData = response.demoData;
+            $scope.demoData = response.data.demoData;
         });
     }]);

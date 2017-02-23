@@ -9,7 +9,7 @@ angular.module('Home')
 
         service.GetSecureData = function (callback) {
             $http.get('/api/DemoData')
-                .success(function (response) {
+                .then(function (response) {
                     callback(response);
                 });
         };

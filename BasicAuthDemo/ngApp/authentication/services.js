@@ -9,7 +9,7 @@ angular.module('Authentication')
 
         service.Login = function (username, password, callback) {
             $http.post('/api/authenticate', { username: username, password: password })
-                .success(function (response) {
+                .then(function (response) {
                     callback(response);
                 });
         };
